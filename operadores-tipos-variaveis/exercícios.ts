@@ -22,3 +22,17 @@ let lado4: number = 8;
 let lado5: number = 10;
 let pPentagono: number = lado1 + lado2 + lado3 + lado4 + lado5;
 console.log(pPentagono);
+
+// exercício 5 - nível 1
+let lado6: number = 8;
+let pHexagono = lado1 + lado2 + lado3 + lado4 + lado5 + lado6;
+console.log(pHexagono);
+
+// exercício 6 -  nível 1
+let x: number = 5;
+let f: number = x ** 2 + 2 * x - 3;
+console.log(f);
+
+// exercício 7 - nivel 1
+f = x ** 3 + x ** 2 + 3 * x - 25;
+console.log(f);
