@@ -45,31 +45,64 @@
 // }
 
 // ex6 - n2
-let dia1: string = "segunda";
-let dia2: string = "terça";
-let dia3: string = "quarta";
-let dia4: string = "quinta";
-let dia5: string = "sexta";
+// let dia1: string = "segunda";
+// let dia2: string = "terça";
+// let dia3: string = "quarta";
+// let dia4: string = "quinta";
+// let dia5: string = "sexta";
 
-let diaEscolhido: string = dia4;
+// let diaEscolhido: string = dia4;
 
-switch (diaEscolhido) {
-  case "segunda":
-    console.log(`Na segunda o aluno tem português e matemática`);
+// switch (diaEscolhido) {
+//   case "segunda":
+//     console.log(`Na segunda o aluno tem português e matemática`);
+//     break;
+//   case "terça":
+//     console.log(`Na terça o aluno tem quimica e matemática`);
+//     break;
+//   case "quarta":
+//     console.log(`Na quarta o aluno tem português e artes`);
+//     break;
+//   case "quinta":
+//     console.log(`Na quinta o aluno tem português e inglês`);
+//     break;
+//   case "sexta":
+//     console.log(`Na sexta o aluno tem português e matemática`);
+//     break;
+//   default:
+//     console.log("O aluno não tem aula amanhã");
+//     break;
+// }
+
+// ex - n2
+
+let palavras: string[] = ["I", "you", "he", "she", "it", "we", "they"];
+
+let escolhido: string = palavras[4];
+
+switch (escolhido) {
+  case "I":
+    console.log(`A tradução de ${escolhido} é "eu"`);
     break;
-  case "terça":
-    console.log(`Na terça o aluno tem quimica e matemática`);
+  case "you":
+    console.log(`A tradução de ${escolhido} é "você"`);
     break;
-  case "quarta":
-    console.log(`Na quarta o aluno tem português e artes`);
+  case "he":
+    console.log(`A tradução de ${escolhido} é "ele"`);
     break;
-  case "quinta":
-    console.log(`Na quinta o aluno tem português e inglês`);
+  case "she":
+    console.log(`A tradução de ${escolhido} é "ela"`);
     break;
-  case "sexta":
-    console.log(`Na sexta o aluno tem português e matemática`);
+  case "it":
+    console.log(`A tradução de ${escolhido} é "isto"`);
+    break;
+  case "we":
+    console.log(`A tradução de ${escolhido} é "nós"`);
+    break;
+  case "they":
+    console.log(`A tradução de ${escolhido} é "eles/elas"`);
     break;
   default:
-    console.log("O aluno não tem aula amanhã");
+    console.log("Escolha uma entrada válida");
     break;
 }
