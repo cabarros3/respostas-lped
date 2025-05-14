@@ -17,16 +17,16 @@
  *
  */
 
-// let count: number = 0; // contador
-// let numero: number = 3; // primeiro número da sequencia
-// let incremento: number = 3; // o primeiro incremento
+let count: number = 0; // contador
+let numero: number = 3; // primeiro número da sequencia
+let incremento1: number = 3; // o primeiro incremento
 
-// while (count < 3) {
-//   console.log(numero); // imprime o número da vez
-//   count++; // incrementa o count
-//   incremento += 2; // próximo incremento aumenta em 2
-//   numero += incremento; // número recebe o número da vez + o incremento (2)
-// }
+while (count < 3) {
+  console.log(numero); // imprime o número da vez
+  numero += incremento1; // número recebe o número da vez + o incremento (2)
+  incremento1 += 2; // próximo incremento aumenta em 2
+  count++; // incrementa o count
+}
 
 let contador: number = 0;
 let entrada: number = 3;
