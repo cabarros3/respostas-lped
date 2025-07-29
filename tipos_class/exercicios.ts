@@ -1,67 +1,126 @@
-// lista de filmes
+// // lista de filmes
 
-class Filmes {
-  id: string;
-  titulo: string;
-  diretor: string;
-  duracao: string;
-  sinopse: string;
+// class Filmes {
+//   id: string;
+//   titulo: string;
+//   diretor: string;
+//   duracao: string;
+//   sinopse: string;
 
-  constructor(
-    id: string,
-    titulo: string,
-    diretor: string,
-    duracao: string,
-    sinopse: string
-  ) {
-    this.id = id;
-    this.titulo = titulo;
-    this.diretor = diretor;
-    this.duracao = duracao;
-    this.sinopse = sinopse;
+//   constructor(
+//     id: string,
+//     titulo: string,
+//     diretor: string,
+//     duracao: string,
+//     sinopse: string
+//   ) {
+//     this.id = id;
+//     this.titulo = titulo;
+//     this.diretor = diretor;
+//     this.duracao = duracao;
+//     this.sinopse = sinopse;
+//   }
+// }
+
+// let listaFilmes: string[][] = [
+//   [
+//     "001",
+//     "Crepúsculo",
+//     "Fulano de Tal",
+//     "120min",
+//     "Um vampiro imortal no ensino médio apronta poucas e boas",
+//   ],
+//   [
+//     "002",
+//     "Entrevista com o vampiro",
+//     "Ciclano de tal",
+//     "110min",
+//     "Um vampiro muito drogado acho que é de boa fazer uma entrevista",
+//   ],
+//   [
+//     "003",
+//     "Elf",
+//     "Um querido de tal",
+//     "96min",
+//     "Um homem de mais de 30 anos acha que é filho de elfos e apronta muito em NY no natal",
+//   ],
+// ];
+
+// function buscaFilme(titulo: string): string[] | undefined {
+//   for (let i: number = 0; i < listaFilmes.length; i++) {
+//     for (let j: number = 0; j < listaFilmes[i].length; j++) {
+//       if (listaFilmes[i][1] === titulo) {
+//         return listaFilmes[i];
+//       }
+//     }
+//   }
+
+//   return undefined;
+// }
+
+// let busca = buscaFilme("Elf");
+
+// if (busca) {
+//   console.log("filme encontrado", busca);
+// } else {
+//   console.log("Filme não encontrado");
+// }
+
+class QuadradoDeNumero {
+  base: number;
+  resultado: number;
+
+  constructor(base: number) {
+    this.base = base;
+    this.resultado = base ** 2;
   }
 }
 
-let listaFilmes: string[][] = [
-  [
-    "001",
-    "Crepúsculo",
-    "Fulano de Tal",
-    "120min",
-    "Um vampiro imortal no ensino médio apronta poucas e boas",
-  ],
-  [
-    "002",
-    "Entrevista com o vampiro",
-    "Ciclano de tal",
-    "110min",
-    "Um vampiro muito drogado acho que é de boa fazer uma entrevista",
-  ],
-  [
-    "003",
-    "Elf",
-    "Um querido de tal",
-    "96min",
-    "Um homem de mais de 30 anos acha que é filho de elfos e apronta muito em NY no natal",
-  ],
+let listaBases: number[][] = [
+  [1, 2, 3],
+  [4, 5, 6],
 ];
 
-function buscaFilme(titulo: string): string[] | undefined {
-  for (let i: number = 0; i < listaFilmes.length; i++) {
-    for (let j: number = 0; j < listaFilmes[i].length; j++) {
-      if (listaFilmes[i][1] === titulo) {
-        return listaFilmes[i];
-      }
+function gerarQuadrados(bases: number[][]): QuadradoDeNumero[] {
+  let resultado: QuadradoDeNumero[] = [];
+
+  for (let i = 0; i < bases.length; i++) {
+    for (let j = 0; j < bases[i].length; j++) {
+      let base = bases[i][j];
+      resultado.push(new QuadradoDeNumero(base));
     }
   }
 
-  return undefined;
+  return resultado;
 }
 
-let busca = buscaFilme("Elf");
+let quadrados = gerarQuadrados(listaBases);
 
-if (busca) {
-  console.log("filme encontrado", busca);
-} else {
-  console.log("Filme não encontrado");
+console.log(quadrados);
+
+// for (let i = 0; i < quadrados.length; i++) {
+//   console.log(`${quadrados[i].base}² = ${quadrados[i].resultado}`);
+// }
+
+// correcao
+
+class Sacola {
+  fabricante: string;
+  volume: number;
+  biodegradavel: boolean;
+
+  constructor(fabricante: string, volume: number, biodegradavel: boolean) {
+    this.fabricante = fabricante;
+    this.volume = volume;
+    this.biodegradavel = biodegradavel;
+  }
 }
+
+function ehBiodegradavel(s1: Sacola, s2: Sacola): boolean {
+  return s1.biodegradavel && s2.biodegradavel;
+}
+
+let sacola1 = new Sacola("ABC", 10, true);
+let sacola2 = new Sacola("XYZ", 8, true);
+
+console.log(ehBiodegradavel(sacola1, sacola2));
